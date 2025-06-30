@@ -5,6 +5,23 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
   color: #f0f0f0;
 }
+header{
+  justify-content: space-between;
+}
+.icono{
+  width: 20%;
+}
+.menu {
+  display: flex;
+  margin-left: auto;
+  gap: 4px;
+  border: none;
+  justify-content: space-between;
+}
+
+.pagina {
+  text-decoration: none;
+}
 .tituloPrin {
   text-align: center;
 }
