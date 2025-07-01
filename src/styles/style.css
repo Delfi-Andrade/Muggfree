@@ -2,7 +2,8 @@
 
 .inicio,
 .nosotros,
-.explora {
+.explora,
+.casas {
   padding: 20px;
 }
 .texto {
@@ -10,6 +11,10 @@
 }
 body {
   background-image: url(/public/fondoMF.gif);
+  padding: 2px;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .contenedorBoton {
   display: flex;
