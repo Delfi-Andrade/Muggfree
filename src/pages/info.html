@@ -2,7 +2,8 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/src/styles/info.css">
+    <link rel="stylesheet" href="/src/styles/info.css" />
+    <link rel="shortcut icon" href="/public/IconMF.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explorar</title>
   </head>
@@ -12,7 +13,8 @@
         <ul class="menu">
           <img
             class="icono"
-            src="/public/IconMF.png" alt="Icono de la pagina"
+            src="/public/IconMF.png"
+            alt="Icono de la pagina"
           />
           <li><a href="../index.html" class="pagina">Inicio</a></li>
           <li><a href="info.html" class="pagina">Explorar</a></li>
@@ -20,17 +22,38 @@
       </nav>
     </header>
     <h1 class="tituloPrin">Explorar</h1>
+    
     <section class="libros">
-      <h2>✨ Explorá la Saga Mágica</h2>
+      <h2 class="titulo">✨ Explorá la Saga Mágica</h2>
+      <section class="carrusel_cartas">
+        <section id="libros_container"></section>
+      </section>
     </section>
+
     <section class="personajes">
-      <h2>🧙 Conocé a quienes hicieron historia en Hogwarts</h2>
+      <h2 class="titulo">🧙 Conocé a quienes hicieron historia en Hogwarts</h2>
+      <section class="carrusel_cartas">
+        <section id="personajes_container"></section>
+      </section>
     </section>
+
     <section class="casas">
-      <h2>🏰 Elegí tu casa... o dejá que ella te elija</h2>
+      <h2 class="titulo">🏰 Elegí tu casa... o dejá que ella te elija</h2>
+      <section class="carrusel_cartas">
+        <section id="casas_container"></section>
+      </section>
     </section>
+
     <section class="hechizos">
-      <h2>✨ Palabras mágicas, efectos increíbles</h2>
+      <h2 class="titulo">🔮 Palabras mágicas, efectos increíbles</h2>
+      <section class="carrusel_cartas">
+        <section id="hechizos_container"></section>
+      </section>
     </section>
+    <script type="module" src="/src/services/info.js"></script>
+    <footer>&copy; 2025 Muggfree. Todos los derechos reservados.</footer>
   </body>
 </html>
+<!--   <div>
+    <button>Ver más</button>
+  </div> -->

@@ -5,7 +5,7 @@ export async function fetchData(tipo) {
     const resp = await fetch(`${BASEAPI}/${tipo}`);
     if (!resp.ok) throw new Error("No se pudo con la info pa");
     const dato = await resp.json();
-    return console.log(dato);
+    return dato;
   } catch (e) {
     return console.error(e.message);
   }

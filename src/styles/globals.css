@@ -5,8 +5,11 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont;
     color: #f0f0f0;
   }
-  .nav {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    justify-content: space-between;
     height: 60px;
     display: flex;
     align-items: center;
@@ -18,8 +21,9 @@
   }
   .menu {
     display: flex;
+    margin: 5px;
     margin-left: auto;
-    gap: 4px;
+    gap: 10px;
     border: none;
     justify-content: space-between;
   }
