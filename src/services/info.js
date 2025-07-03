@@ -86,3 +86,28 @@ async function mostrarPersonajes() {
 mostrarLibros();
 mostrarCasas();
 mostrarPersonajes();
+
+const selectCategoria = document.getElementById("filtrado");
+
+const contenedores = {
+  spells: document.getElementById("hechizos"),
+  books: document.getElementById("libros"),
+  characters: document.getElementById("personajes"),
+  houses: document.getElementById("casas"),
+};
+
+selectCategoria.addEventListener("change", () => {
+  const seleccion = selectCategoria.value;
+
+  Object.entries(contenedores).forEach(([clave, elemento]) => {
+    if (clave === seleccion) {
+      elemento.style.display = "block";
+    } else {
+      elemento.style.display = "none";
+    }
+  });
+
+  if (!seleccion) {
+    Object.values(contenedores).forEach((el) => (el.style.display = "block"));
+  }
+});

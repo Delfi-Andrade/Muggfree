@@ -23,23 +23,35 @@
       </nav>
     </header>
     <h1 class="tituloPrin">Explorar</h1>
-
-    <section class="libros">
+    <section class="buscar">
+      <div class="buscarC">
+        <input type="text" name="" placeholder="Escriba personaje que busca" id="buscador">
+        <button class="explorar" type="submit">Buscar</button>
+      </div>
+      <select name="" id="filtrado">
+        <option value="">Seleccionar opcion</option>
+        <option value="books">Libro</option>
+        <option value="characters">Personajes</option>
+        <option value="houses">Casas</option>
+        <option value="spells">Hechizos</option>
+      </select>
+    </section>
+    <section id="libros" class="libros">
       <h2 class="titulo">✨ Explorá la Saga Mágica</h2>
       <section class="carrusel_cartas" id="libros_container"></section>
     </section>
 
-    <section class="personajes">
+    <section id="personajes" class="personajes">
       <h2 class="titulo">🧙 Conocé a quienes hicieron historia en Hogwarts</h2>
       <section class="carrusel_cartas" id="personajes_container"></section>
     </section>
 
-    <section class="casas">
+    <section id="casas" class="casas">
       <h2 class="titulo">🏰 Elegí tu casa... o dejá que ella te elija</h2>
       <section class="carrusel_cartas" id="casas_container"></section>
     </section>
 
-    <section class="hechizos">
+    <section id="hechizos" class="hechizos">
       <h2 class="titulo">🔮 Palabras mágicas, efectos increíbles</h2>
       <section class="carrusel_cartas" id="hechizos_container"></section>
       <div id="controlesPag">
