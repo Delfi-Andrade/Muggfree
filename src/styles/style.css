@@ -9,13 +9,15 @@
 .texto {
   text-align: center;
 }
+
 body {
-  background-image: url(/public/fondoMF.gif);
+  background: linear-gradient(#000, #050b5b);
+  margin: 0;
   padding: 2px;
-  height: auto;
+  height: 100vh;  
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-attachment: fixed;
 }
 .contenedorBoton {
   display: flex;
@@ -37,9 +39,23 @@ footer {
   padding-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+
   bottom: 0;
+  margin-top: auto;
+  align-items: flex-end;
 }
 .explorar:hover {
   background-color: rgb(142, 108, 228, 0.4);
   box-shadow: 0 0 15px rgb(194, 168, 255);
 }
+@media (min-width: 349px) {
+  body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }}
+
+  @media (max-width:674px){
+    footer{
+      position: fixed;
+    }
+  }
