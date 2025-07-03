@@ -1,6 +1,6 @@
 import { fetchData } from "../services/main";
 
-function crearCarta(titulo, contenidoHTML) {
+export function crearCarta(titulo, contenidoHTML) {
   const card = document.createElement("article");
   card.className = "carta";
   card.innerHTML = `
@@ -57,19 +57,6 @@ async function mostrarCasas() {
     container.appendChild(card);
   });
 }
-async function mostrarHechizos() {
-  const hechizos = await fetchData("spells");
-  const container = document.getElementById("hechizos_container");
-  container.innerHTML = "";
-  hechizos.forEach((hechizo) => {
-    const contenido = `
-      <p><strong>Hechizo:</strong> ${hechizo.spell}</p>
-      <p><strong>Sirve para:</strong> ${hechizo.use}</p>
-    `;
-    const card = crearCarta(hechizo.spell, contenido);
-    container.appendChild(card);
-  });
-}
 async function mostrarPersonajes() {
   const personajes = await fetchData("characters");
   const container = document.getElementById("personajes_container");
@@ -99,4 +86,3 @@ async function mostrarPersonajes() {
 mostrarLibros();
 mostrarCasas();
 mostrarPersonajes();
-mostrarHechizos();
