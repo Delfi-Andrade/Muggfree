@@ -36,9 +36,13 @@ async function mostrarCasas() {
   const container = document.getElementById("casas_container");
   container.innerHTML = "";
 
-  casas.forEach(casa => {
-    const coloresCasa = casa.colors.map((color) =>
-          `<span class="colorPlaca" style="background-color:${color};">${color}</span>`).join("");
+  casas.forEach((casa) => {
+    const coloresCasa = casa.colors
+      .map(
+        (color) =>
+          `<span class="colorPlaca" style="background-color:${color}; ">${color}</span>`
+      )
+      .join(" ");
     const contenido = `
     <div class="cabecera">
     <h3><strong>Nombre casa: </strong>${casa.house}</h3>
@@ -49,7 +53,7 @@ async function mostrarCasas() {
     <p><strong>Colores: </strong></p>
     <div>${coloresCasa}</div>
   `;
-  const card =crearCarta(casa.house, contenido)
+    const card = crearCarta(casa.house, contenido);
     container.appendChild(card);
   });
 }
@@ -57,7 +61,6 @@ async function mostrarHechizos() {
   const hechizos = await fetchData("spells");
   const container = document.getElementById("hechizos_container");
   container.innerHTML = "";
-
   hechizos.forEach((hechizo) => {
     const contenido = `
       <p><strong>Hechizo:</strong> ${hechizo.spell}</p>
@@ -79,13 +82,13 @@ async function mostrarPersonajes() {
 
     const contenido = `
       <img src="${personaje.image}" alt="Imagen de ${personaje.nickname}" />
-      <p><strong>Nombre completo:</strong> ${personaje.fullname}</p>
+      <p><strong>Nombre completo:</strong> ${personaje.fullName}</p>
       <p><strong>Apodo:</strong> ${personaje.nickname}</p>
       <p><strong>Casa de Hogwarts:</strong> ${
         personaje.hogwartsHouse || "Sin casa"
       }</p>
       <p><strong>Interpretado por:</strong> ${personaje.interpretedBy}</p>
-      <p><strong>Fecha de nacimiento:</strong> ${personaje.birthDate}</p>
+      <p><strong>Fecha de nacimiento:</strong> ${personaje.birthdate}</p>
       <p><strong>Hijos:</strong> ${hijos}</p>
     `;
     const card = crearCarta(personaje.nickname, contenido);
@@ -97,4 +100,3 @@ mostrarLibros();
 mostrarCasas();
 mostrarPersonajes();
 mostrarHechizos();
-  

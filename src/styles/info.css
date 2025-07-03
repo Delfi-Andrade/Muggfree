@@ -1,106 +1,75 @@
 @import url("./globals.css");
 
-body{
-    min-height: 100dvh;
-    background: linear-gradient(#000, #19062d);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    overflow-x: hidden;
-    padding-bottom: 80px;
+body {
+  margin: 0;
+  padding: 0 0 30px 0;
+  background: linear-gradient(#000, #19062d);
+  color: #8d9478;
+  overflow-x: hidden;
 }
-.titulo{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.carrusel_cartas section {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 15px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-  }
 
-.carta{
-    background: #000;
-    border-radius: 12px;
-    padding: 15px 10px 15px 15px;
-    width: 270px;
-    height: 460px;
-    gap: 10px;
-    box-shadow: 0 2px 8px rgb(91, 30, 155, 0.15);
-    flex-shrink: 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-    overflow-y: auto;
-    word-wrap: break-word;
-    transition: transform 0.3s ease;
+.tituloPrin {
+  padding: 20px;
+  text-align: center;
 }
-.carta:hover{
-    transform: scale(1.05);
+
+.titulo {
+  padding: 1rem;
 }
+
+.carrusel_cartas {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+
+.carta {
+  background: #000;
+  border-radius: 12px;
+  padding: 15px 10px;
+  width: 270px;
+  height: 460px;
+  box-shadow: 0 2px 8px rgba(91, 30, 155, 0.15);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.carta:hover {
+  transform: scale(1.05);
+}
+
 .carta img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-    max-height: 200px; 
-    object-fit: contain;
-    border-radius: 8px;
-    align-self: center;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.carta .contenido {
+  overflow-y: auto;
+  flex-grow: 1;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 350px) {
+  .carta {
+    width: 200px;
+    font-size: 14px;
   }
-#desc_carta{
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    scroll-behavior: smooth;
 }
-@media(hover: hover) and (pointer: fine){
-    .carta:hover{
-        transform: scale(1.05);
-    }
-    .carta img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        object-fit: cover;
-      }
-}
-@media(max-widht:350px) {
-    .carta{
-        min-width: 200px;
-        font-size: 14px;
-    }
-    .colorPlaca {
-        padding: 4px 8px;
-        font-size: 12px;
-      }    
-}
+
 @media (max-width: 290px) {
-    .carrusel_cartas {
-      padding: 8px 5px;
-    }
-    .carta {
-      min-width: 170px;
-      padding: 10px;
-      font-size: 13px;
-    }
-    .colorPlaca {
-      padding: 3px 6px;
-      font-size: 11px;
-    }
-    #desc_carta{
-        gap: 10px;
-        padding-bottom: 8px;
-    }
+  .carta {
+    width: 170px;
+    font-size: 13px;
   }
-/* button{
-    background-color: transparent;
-    border: 2px solid rgb(48, 1, 93);
-    padding: 10px;
-    font-size: large;
-    border-radius: 15px;
-} */
+}
