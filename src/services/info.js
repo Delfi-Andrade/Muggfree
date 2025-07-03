@@ -111,3 +111,20 @@ selectCategoria.addEventListener("change", () => {
     Object.values(contenedores).forEach((el) => (el.style.display = "block"));
   }
 });
+
+const inputBusqueda = document.getElementById("buscarInput");
+
+inputBusqueda.addEventListener("input", () => {
+  const termino = inputBusqueda.value.toLowerCase().trim();
+  const contenedorVisible = Object.values(contenedores).find(
+    (c) => c.style.display === "block"
+  );
+  if (!contenedorVisible) return;
+
+  const cartas = contenedorVisible.querySelectorAll(".carta");
+
+  cartas.forEach((carta) => {
+    const texto = carta.textContent.toLowerCase();
+    carta.style.display = texto.includes(termino) ? "block" : "none";
+  });
+});

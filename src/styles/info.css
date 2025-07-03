@@ -16,7 +16,7 @@ body {
 .titulo {
   padding: 1rem;
 }
-#buscador{
+#buscarInput{
   border-radius: 8px;
   background: rgba(67, 65, 70, 0.4);
   border: none;
@@ -24,19 +24,11 @@ body {
   width: 25vh;
   margin: 0px;
 }
-.explorar {
-  border-radius: 8px;
-  background: rgba(82, 11, 214, 0.4);
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  margin: 0px;
-}
-.buscarC{
+
+#busqueda{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
   width: 100vw;
   gap: 6px;
   padding-bottom: 6px;
